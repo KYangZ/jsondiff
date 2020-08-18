@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSON Diff Tool</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        }        
+    </style>
+</head>
+
+<body>
+    <div id="container" style="width: 100%; height: 100%;"></div>
+    <script defer>
+        window.addEventListener("load", (event) => {
+            jsondiff.init("container");
+            // const CL_PORTAL_CONFIG = {
+            //     ignore: ["Id", "url"],
+            //     embed: ["clcommon__Actor_Definition__c", "clcommon__data__c", "clcommon__Branding__c", "clcommon__Content__c"],
+            //     sortKeys: ["Name", "clcommon__Actor_name__c"],
+            //     ignoreArrayOrder: false,
+            //     collapseSimilar: true,
+            //     oneWay: true
+            // }
+            // jsondiff.setOptions(CL_PORTAL_CONFIG);
+            // jsondiff.setLeft("{}", "string", {
+            //     fileName: "portalv1.txt",
+            //     author: "Nathan Phan",
+            //     date: "7/20/20"
+            // });
+            // jsondiff.setRight("{}", "string", {
+            //     fileName: "portalv2.txt",
+            //     author: "Sneha Periwal",
+            //     date: "7/25/20"
+            // });
+            // jsondiff.runDiff();
+        });
+    </script>
+</body>
+
+</html>

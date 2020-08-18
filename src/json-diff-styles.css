@@ -1,0 +1,359 @@
+#json-diff-external-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif; 
+    color:white; 
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+}
+
+.jdiff-sidebar {
+    width: 250px;
+    height: 100%;
+    background: #151515;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+    border-right: 1px solid white;
+    padding: 0px 10px;
+}
+
+.jdiff-main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.jdiff-topbar {
+    height: 50px;
+    background: #151515;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+.jdiff-topbar-section {
+    width: 50%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: medium;
+    display: flex;
+    flex-direction: row;
+}
+
+.editor-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.editor { 
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;        
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.innerOption {
+    width: 100%;
+    margin: 7px 0px;
+}
+
+.optionTextField {
+    width: 100%;
+    background-color: #505050;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 5px 5px 5px 0px;
+}
+
+.listContainer {
+    width: 100%;
+    /* min-height: 20px; */
+    height: 60px;
+    overflow-y: auto;
+}
+
+.optionInput {
+    width: 100%;
+    /* height: 25px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.squareButtons {
+    background-color: #404040;
+    border: none;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+.squareButtons:hover {
+    background-color: #505050;
+}
+
+.majorButtons {
+    background-color: hsl(0, 0%, 8%);
+    margin: 5px;
+    padding: 7px;
+    color: white;
+    border: 1px solid white;
+    /* width: inherit; */
+}
+
+.majorButtons:hover {
+    transition: background-color 0.5s;
+    background-color: white;
+    color: #151515;
+}
+
+#right-editor-label {
+    width: 100%;
+    align-self: center;
+    padding-left: 15px;
+}
+
+#left-editor-label {
+    align-self: center;
+    padding-left: 15px;
+}
+
+#exportLeft, #exportRight {
+    width: 100%;
+}
+
+#reset, #rerun, #edit, #undo {
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    margin: 0px 5px;
+    text-align: center;
+    /* margin: auto; */
+}
+
+#edit {
+    width: 80px;
+    padding: 0px;
+    font-size: 20px;
+    background-color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    color: #151515;
+    border-radius: 3px;
+    transition: none;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+#undo {
+    width: 80px;
+    padding: 0px;
+    font-size: 18px;
+    background-color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    color: #151515;
+    border-radius: 3px;
+    transition: none;
+}
+
+#edit:hover, #undo:hover {
+    background-color: white;
+}
+
+#green-button {
+    transition: color 0.2s;
+    color: limegreen;
+    border: 1px solid limegreen;
+    border-radius: 3px;
+}
+
+#green-button:hover {
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 3px;
+}
+
+#jdiff-logo {
+    width: 100%;
+    justify-self: center;
+    padding: 15px 0px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+#jdiff-file-inputs {
+    /* width: 15%; */
+    /* background-color: orange; */
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 0.5%; */
+    /* justify-items: center; */
+}
+
+#statusA, #statusB {
+    font-family: Arial, Helvetica, sans-serif; 
+    color:red; 
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+    height: 24px;
+    /* align-self: center; */
+}
+
+#options {
+    /* width: 60%;
+    height: 90%; */
+    /* background-color: yellow; */
+    /* padding: 0.5% 20px 0px 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#exports {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#submit {
+    display: flex;
+    flex-direction: column;
+}
+
+#jdiff-left-editor {
+    float: left;
+}
+
+#jdiff-right-editor {
+    left: 50%;
+}
+
+/* Style the list (remove margins and bullets, etc) */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the list items */
+ul li {
+    border: 1px solid #151515;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #303030;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+/* Add a light grey background color on hover */
+ul li:hover {
+    background-color: #505050;
+}
+
+/* Style the close button (span) */
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 5px 9px;
+    transform: translate(0%, -50%);
+}
+
+.close:hover {background: #707070;}
+
+/* marker CSS classes */
+.deletion {
+    position:absolute;
+    background:rgba(255, 50, 50, 0.2);
+    pointer-events: auto;
+    transition: background-color 0.5s;
+    /* z-index:0; */
+}
+
+.deletion:hover {
+    position:absolute;
+    background-color: rgba(220, 20, 60, 0.6);
+    cursor: pointer !important;
+}
+
+.addition {
+    position:absolute;
+    background:rgba(0, 177, 64, 0.3);
+    pointer-events: auto;
+    transition: background-color 0.5s;
+    /* z-index:20 */
+}
+
+.addition:hover {
+    position:absolute;
+    background-color: rgba(0, 177, 64, 0.6);
+    cursor: pointer !important;
+}
+
+.modification {
+    position:absolute;
+    background:rgba(255, 195, 11, 0.2);
+    pointer-events: auto;
+    transition: background-color 0.5s;
+}
+
+.modification:hover {
+    position:absolute;
+    background-color: rgba(255, 195, 11, 0.4);
+    cursor: pointer !important;
+}
+
+.currentChange {
+    position:absolute;
+    background:rgba(190, 190, 190, 0.2);
+    pointer-events: auto;
+    /* transition: background-color 0.5s; */
+    /* animation-name: change;
+    animation-duration: 1s;
+     */
+}
+
+/* .currentChange:hover {
+    position:absolute;
+    background-color: rgba(0, 155, 255, 0.05);
+    cursor: pointer !important;
+} */
+
+.merge {
+    position:absolute;
+    background:rgba(0, 155, 255, 0.2);
+    pointer-events: auto;
+    transition: background-color 0.5s;
+}
+
+.merge:hover {
+    position:absolute;
+    background-color: rgba(0, 155, 255, 0.3);
+    cursor: pointer !important;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "security",
+  "version": "1.0.0",
+  "description": "This is an internal tool for performing difference on JSON objects",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --open",
+    "docs": "jsdoc2md src/index.js > docs.md"
+  },
+  "author": "Kory Yang",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jsdoc-to-markdown": "^6.0.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "ace-builds": "^1.4.12",
+    "lodash": "^4.17.15"
+  }
+}

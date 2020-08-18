@@ -1,0 +1,74 @@
+<!-- UNUSED - just a way to view / edit the structure of the tool in an HTML file -->
+<div id="json-diff-container">
+    <div class="sidebar">
+        <div id="logo">
+            <p style="font-family: Arial, Helvetica, sans-serif; color:white; font-size: x-large; font-weight: 750;">JSON DIFFS</p>
+        </div>
+        <div id="file-inputs">
+            <input type="file" id="inputA" name="inputA" style="color:white;" accept="text/plain application/JSON">
+            <label for="inputA" id="statusA"></label>
+            <input type="file" id="inputB" name="inputB" style="color:white;" accept="text/plain application/JSON">
+            <label for="inputB" id="statusB"></label>
+        </div>
+        <button id="executeDiff" class="majorButtons">Diff Files</button>
+        <div id="options">
+            <div id="ignoreOption" class="innerOption">
+                <p>Ignore Properties:</p>
+                <div id="ignoreInput" class="optionInput">
+                    <input class="optionTextField" id="ignoreField" type="text" placeholder="Ignore diffs by property">
+                    <button class="squareButtons" id="addIgnore">+</button>
+                </div>
+                <div class="listContainer">
+                    <ul id="ignoreList"></ul>
+                </div>
+            </div>
+            <div id="embeddedOption" class="innerOption">
+                <p>Expand Embedded JSON:</p>
+                <div id="embeddedInput" class="optionInput">
+                    <input class="optionTextField" id="embedField" type="text" placeholder="Embedded JSON by property">
+                    <button class="squareButtons" id="addEmbedded">+</button>
+                </div>
+                <div class="listContainer">
+                    <ul id="embedList"></ul>
+                </div>
+            </div>
+            <div id="sortingKeys" class="innerOption">
+                <p>Array Sorting Keys:</p>
+                <div id="keyInput" class="optionInput">
+                    <input class="optionTextField" id="keyField" type="text" placeholder="Array key property names">
+                    <button class="squareButtons" id="addKey">+</button>
+                </div>
+                <div class="listContainer">
+                    <ul id="keyList"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="submit">
+            <div id="exports">
+                <button id="exportLeft" class="majorButtons">Export Left</button>
+                <button id="exportRight" class="majorButtons">Export Right</button>
+            </div>
+            <button id="hideLinesButton" class="majorButtons">Hide Unmarked Lines</button>
+            <button id="foldUnmarkedButton" class="majorButtons">Hide Unmarked Objects</button>
+            <button id="expandButton" class="majorButtons">Show All Sections</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="topbar">
+            <div class="topbar-section">
+                <div id="left-editor-label">FILE 1, Unknown Author</div>
+            </div>
+            <div class="topbar-section" id="right-topbar">
+                <div id="right-editor-label">FILE 2, Unknown Author</div>
+                <button class="majorButtons" id="undo" title="undo last merge">&#8617;</button>
+                <button class="majorButtons" id="edit" title="enable editing">&#9998;</button>
+                <button class="majorButtons" id="reset">Reset</button>
+                <button class="majorButtons" id="rerun">Rerun Diff</button>
+            </div>
+        </div>
+        <div class="editor-container">
+            <div class="editor" id="json_a"></div>
+            <div class="editor" id="json_b"></div>
+        </div>
+    </div>
+</div>
